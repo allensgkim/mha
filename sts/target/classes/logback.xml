@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+<configuration> <!-- scan="true" scanPeriod="30 seconds" -->
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight(%-5level) %magenta(%-4relative) --- [ %thread{10} ] %cyan(%logger{20}) : %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="kr.or.mha" level="DEBUG"/>
+	
+	<logger name="org.springframework" level="INFO" />
+	<logger name="org.springframework.web.bind.annotation.support.HandlerMethodInvoker" level="INFO" />
+	<logger name="org.springframework.web.servlet.DipatcherServlet" level="INFO" />
+
+	<root level="INFO">
+        <appender-ref ref="CONSOLE" /> <!-- CONSOLE : Console에 로그를 출력하고자 할 때 사용 -->
+        <!--  <appender-ref ref="FILE"/> File로 로그를 남기고자 할 때 사용 -->
+    </root>
+
+</configuration>
