@@ -1,0 +1,5 @@
+INSERT INTO TEST_USERS (
+	ID, PASSWORD, NAME, ROLE
+) VALUES (
+	'ID001', '2345', '테스트', 'test'
+);
