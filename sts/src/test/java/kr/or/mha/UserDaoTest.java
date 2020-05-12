@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import kr.or.mha.dao.UserDao;
-import kr.or.mha.vo.UserVo;
+import kr.or.mha.dao.UserDAOImpl;
+import kr.or.mha.dto.UserVO;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:/applicationContext.xml")
@@ -17,20 +17,17 @@ public class UserDaoTest {
 	private static final Logger log = LoggerFactory.getLogger(UserDaoTest.class); 
 	
 	@Autowired
-	private UserDao userDao;
+	private UserDAOImpl userDao;
 	
 	@Test
 	public void findById() {
-		UserVo user = userDao.findById("ID001");
-		log.debug("User : {} ", user.getId() + ", " + user.getName());
+
 	}
 	
 	@Test
 	public void create() {
 		log.debug("User : test~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-		UserVo user = new UserVo("ID004", "1234", "산사람", "admin");
-		userDao.create(user);
-		UserVo userVo = userDao.findById(user.getId());
+		UserVO user = new UserVO("ID004", "1234", "산사람", "admin");
 		
 		log.debug("User : {} ", user.getId() + ", " + user.getName() + ", " + user.getPassword());
 	}

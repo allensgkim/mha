@@ -6,22 +6,21 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
-	<context:property-placeholder location="classpath:database.properties" />
-	<context:annotation-config />
-	
+	<context:property-placeholder location="classpath:database.properties" />	
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close"
 		p:driverClassName="${jdbc.driver}"
 		p:url="${jdbc.url}" 
 		p:username="${jdbc.username}"
 		p:password="${jdbc.password}" />
-		
-	<bean id="userDao" class="kr.or.mha.dao.UserDao"
-		p:dataSource-ref="dataSource"
-	/>
-
-	<bean id="messageProvider" class="kr.or.mha.di.HiWorldMessageProvider"></bean>
 	
-	<bean id="messageRender" class="kr.or.mha.di.MessageRender">
-		<property name="messageProvider" ref="messageProvider"></property>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="configLocation" value="classpath:mybatis-config.xml"/>
+		<property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml"></property>
 	</bean>
+	
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate"  destroy-method="clearCache">
+		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
+	</bean>
+
 </beans>

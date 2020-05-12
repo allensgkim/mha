@@ -1,26 +1,25 @@
 package kr.or.mha.di;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 public class MessageRender {
+	
 	private MessageProvider messageProvider;
+
+	
+	public MessageRender() {
+		System.out.println("aaaa-----------------");
+	}
 	
 	public void setMessageProvider(MessageProvider messageProvider) {
-		this.messageProvider = messageProvider;
-	}
-	
-	public void render() {
 		System.out.println(messageProvider.getMessage());
 	}
-	
+
+
 	public static void main(String[] args) {
-		ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
-		MessageRender messageRender = (MessageRender) ac.getBean("messageRender");
-		messageRender.render();
-		
-		
-		
+		System.out.println("----");
 		/*
 		 * MessageRender render = new MessageRender(); render.setMessageProvider(new
 		 * HelloworldMessageProvider()); render.render();
