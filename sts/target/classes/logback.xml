@@ -7,7 +7,7 @@
 		</encoder>
 	</appender>
 
-	<logger name="kr.or.mha" level="DEBUG"/>
+	<logger name="com.shi.pms" level="DEBUG"/>
 	
 	<logger name="org.springframework" level="INFO" />
 	<logger name="org.springframework.web.bind.annotation.support.HandlerMethodInvoker" level="INFO" />
