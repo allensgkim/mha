@@ -5,6 +5,7 @@
 
 <mapper namespace="com.shi.pms.mapper.userMapper">
 	<select id="selectUser" resultType="userVO">
+	
 		SELECT ID, PASSWORD, NAME, ROLE FROM TEST_USERS
 	</select>
 </mapper>
