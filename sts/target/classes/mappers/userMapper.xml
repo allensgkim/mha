@@ -4,7 +4,6 @@
 						"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.shi.pms.mapper.userMapper">
-
 	<select id="selectUser" resultType="userVO">
 		SELECT ID, PASSWORD, NAME, ROLE FROM TEST_USERS
 	</select>
