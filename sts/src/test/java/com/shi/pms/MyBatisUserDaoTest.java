@@ -1,4 +1,4 @@
-package kr.or.mha;
+package com.shi.pms;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

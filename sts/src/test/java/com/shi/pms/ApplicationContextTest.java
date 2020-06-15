@@ -1,4 +1,4 @@
-package kr.or.mha;
+package com.shi.pms;
 
 import static org.junit.Assert.assertNotNull;
 
