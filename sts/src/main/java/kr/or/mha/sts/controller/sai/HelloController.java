@@ -1,4 +1,4 @@
-package com.shi.pms.controller.sai;
+package kr.or.mha.sts.controller.sai;
 
 import java.util.List;
 import java.util.Locale;
@@ -10,8 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.shi.pms.dto.UserVO;
-import com.shi.pms.service.UserService;
+import kr.or.mha.sts.dto.UserVO;
+import kr.or.mha.sts.service.UserService;
 
 @Controller
 public class HelloController {

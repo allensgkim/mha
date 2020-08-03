@@ -1,8 +1,8 @@
-package com.shi.pms.dao;
+package kr.or.mha.sts.dao;
 
 import java.util.List;
 
-import com.shi.pms.dto.UserVO;
+import kr.or.mha.sts.dto.UserVO;
 
 public interface UserDAO {
 	public List<UserVO> selectUser() throws Exception;

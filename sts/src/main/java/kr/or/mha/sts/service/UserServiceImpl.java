@@ -1,12 +1,12 @@
-package com.shi.pms.service;
+package kr.or.mha.sts.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.shi.pms.dao.UserDAO;
-import com.shi.pms.dto.UserVO;
+import kr.or.mha.sts.dao.UserDAO;
+import kr.or.mha.sts.dto.UserVO;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {

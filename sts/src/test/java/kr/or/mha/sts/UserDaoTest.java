@@ -1,4 +1,4 @@
-package com.shi.pms;
+package kr.or.mha.sts;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.shi.pms.dao.UserDAOImpl;
-import com.shi.pms.dto.UserVO;
+import kr.or.mha.sts.dao.UserDAOImpl;
+import kr.or.mha.sts.dto.UserVO;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:/applicationContext.xml")

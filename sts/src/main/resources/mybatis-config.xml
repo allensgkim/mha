@@ -5,7 +5,7 @@
 						
 <configuration>
 	<typeAliases>
-		<typeAlias type="com.shi.pms.dto.UserVO" alias="userVO" />
+		<typeAlias type="kr.or.mha.sts.dto.UserVO" alias="userVO" />
 	</typeAliases>
 	
 </configuration>

@@ -1,8 +1,8 @@
-package com.shi.pms.service;
+package kr.or.mha.sts.service;
 
 import java.util.List;
 
-import com.shi.pms.dto.UserVO;
+import kr.or.mha.sts.dto.UserVO;
 
 public interface UserService {
 	public List<UserVO> selectUser() throws Exception;

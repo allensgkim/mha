@@ -1,4 +1,4 @@
-package com.shi.pms.di;
+package kr.or.mha.sts.di;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

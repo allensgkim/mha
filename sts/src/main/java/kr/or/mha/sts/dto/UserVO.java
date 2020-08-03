@@ -1,4 +1,4 @@
-package com.shi.pms.dto;
+package kr.or.mha.sts.dto;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;

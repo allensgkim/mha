@@ -1,4 +1,4 @@
-package com.shi.pms.dao;
+package kr.or.mha.sts.dao;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.shi.pms.dto.UserVO;
+import kr.or.mha.sts.dto.UserVO;
 
 @Repository("userDAO")
 public class UserDAOImpl implements UserDAO {
@@ -17,7 +17,7 @@ public class UserDAOImpl implements UserDAO {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	private static final String nameSpace = "com.shi.pms.mapper.userMapper";
+	private static final String nameSpace = "ko.or.mha.sts.mapper.userMapper";
 	
 	@Override
 	public List<UserVO> selectUser() throws Exception {
