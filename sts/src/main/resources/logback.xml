@@ -3,15 +3,18 @@
 <configuration> <!-- scan="true" scanPeriod="30 seconds" -->
 	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
-			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight(%-5level) %magenta(%-4relative) --- [ %thread{10} ] %cyan(%logger{20}) : %msg%n</pattern>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) %magenta(%-4relative) --- [ %thread{10} ] %cyan(%logger{20}) : %msg%n</pattern>
 		</encoder>
 	</appender>
 
-	<logger name="kr.or.mha.sts" level="DEBUG"/>
-	
 	<logger name="org.springframework" level="INFO" />
 	<logger name="org.springframework.web.bind.annotation.support.HandlerMethodInvoker" level="INFO" />
 	<logger name="org.springframework.web.servlet.DipatcherServlet" level="INFO" />
+
+	<logger name="kr.or.mha.sts" level="DEBUG" />
+	<logger name="query" level="DEBUG" />
+	<logger name="jdbc.sqltiming" level="DEBUG"/>
+	<logger name="jdbc.resultsettable" level="INFO" />
 
 	<root level="INFO">
         <appender-ref ref="CONSOLE" /> <!-- CONSOLE : Console에 로그를 출력하고자 할 때 사용 -->

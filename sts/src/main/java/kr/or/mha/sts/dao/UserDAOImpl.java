@@ -17,7 +17,7 @@ public class UserDAOImpl implements UserDAO {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	private static final String nameSpace = "ko.or.mha.sts.mapper.userMapper";
+	private static final String nameSpace = "query.mha.sts.mapper.userMapper";
 	
 	@Override
 	public List<UserVO> selectUser() throws Exception {

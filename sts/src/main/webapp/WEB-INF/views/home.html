@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default_layout">
+
+<div layout:fragment="content">
+		<h1 class="body_bg">Hello World</h1>
+	
+		<table>
+	        <thead>
+	            <tr>
+	                <th>아이디</th>
+	                <th>비밀번호</th>
+	                <th>이름</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <tr th:each="user : ${userList}">
+	                    <td th:text="${user.id}">1</td>
+	                    <td th:text="${user.password}"></td>
+	                    <td th:text="${user.name}"></td>
+	            </tr>
+	        </tbody>
+		</table>
+		<br>
+</div>
+</html>
