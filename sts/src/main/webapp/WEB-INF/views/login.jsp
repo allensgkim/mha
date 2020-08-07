@@ -3,7 +3,8 @@
     <head>
         <title>Warehouse Management System</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <%@ include file="../common/commonLink.jspf" %>
+		<link href="/css/style.css" rel="stylesheet">
+		<script src="/js/jquery-3.3.1.js"></script>
         <script>
             $(function() {  //gnb, sidebar 클릭시 스타일 현재 상태 스타일링을 위한 시연용 스크립트 입니다. 구현시 삭제 필요
                 $(".reset_password a").click(function(){$(".resetpwlayer").show();return false;});
