@@ -1,0 +1,320 @@
+@charset "utf-8";
+/********* Reset *********/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.body-wrapper {
+	width: 100%;
+	min-width: 1700px;
+	background: #fff;
+}
+
+/* header */
+header {
+	position: fixed;
+	width: 100%;
+	background: #323a30;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	z-index: 1;
+}
+
+.body-wrapper .container {
+	width: 100%; /*margin-top: -100px;*/
+}
+
+header .inner {
+	min-width: 998px;
+	padding-right: 12px;
+}
+
+.personal {
+	float: right;
+}
+.personal li {
+	float: left;
+	color: #fff;
+	padding: 4px 10px;
+	background: url("/images/utildiv.png") no-repeat 0 7px;
+}
+.personal li:first-child {
+	background: none;
+}
+.personal:before {
+	content: '';
+	display: inline-block;
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+	width: 12px;
+	height: 14px;
+}
+.personal strong {
+	color: #ececec;
+}
+.personal button {
+	height: 19px;
+	background: #676b68;
+	border: 1px solid #6d736c;
+	border-radius: 1px;
+	font-size: 12px;
+	color: #ececec;
+}
+
+
+
+
+/* Admin */
+.body_bg {
+	background: #194876;
+}
+input:focus, button:focus {
+	outline: none !important;
+}
+ol, ul, li {
+	list-style: none;
+}
+input, button {
+	cursor: pointer;
+}
+.current {
+	border: 1px solid #ff5b00 !important;
+}
+
+
+.login_wrap {
+	margin: auto;
+	overflow: hidden;
+	width: 566px;
+	bottom: 0;
+	height: 400px;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.content_wrap {
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+	background: #fff url("/images/bg_login.png") no-repeat;
+	height: 320px;
+	border-radius: 10px;
+}
+.login_area {
+	padding: 0px 55px 40px 120px;
+}
+.login_area>h1 .title {
+	display: block;
+	width: 80%;
+	height: 45px;
+	position: relative;
+	text-align: center;
+	top: 20px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+}
+.ver {
+	display: block;
+	width: 80%;
+	color: #fff;
+	position: relative;
+	text-align: right;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	font-size: 12px;
+}
+.login_area>fieldset .user_input {
+	display: block;
+}
+.login_area>fieldset .user_input li {
+	margin-bottom: 8px;
+	position: relative;
+}
+.login_area>fieldset>ul .input_box {
+	display: inline-block;
+	font-size: 1.1em;
+	height: 40px;
+	letter-spacing: 0;
+	overflow: hidden;
+	position: relative;
+	width: 320px;
+	border-radius: 3px;
+	background: #fff !important;
+}
+.login_area>fieldset>ul .input_box span {
+	height: 100%;
+	width: 45px;
+	position: absolute;
+}
+.login_area>fieldset>ul .input_box .usrId {
+	background: url("/images/icon_id.png") no-repeat scroll 50% center;
+}
+.login_area>fieldset>ul .input_box .usrPw {
+	background: url("/images/icon_pw.png") no-repeat scroll 50% center;
+}
+.login_area>fieldset>ul .input_box input {
+	border: 0 none;
+	margin-left: 41px !important;
+	width: 250px;
+	font-size: 16px;
+	background: #fff !important;
+	height: 32px;
+}
+.login_area>fieldset .user_save button {
+	border-radius: 3px;
+	height: 40px;
+	width: 320px;
+	font-weight: bold;
+	letter-spacing: normal;
+	border: 1px solid #194876;
+	background: #5FA0DD;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+.login_area>fieldset .user_save button:hover {
+	background: #194876;
+}
+.reset_password {
+	text-align: right;
+	padding: 20px 5px 0px 0px;
+	height: 45px;
+}
+.reset_password a {
+	text-decoration: underline;
+	font-size: 14px;
+	color:#fff;
+}
+.login_wrap .copyright {
+	color: #666;
+	letter-spacing: 0;
+	margin-top: 15px;
+	text-align: center;
+	font-size: 12px;
+}
+
+
+#parentLayer {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 20px;
+	display: none;
+}
+.dim40 {
+	background: url(/images/dim40.png);
+}
+.layer {
+	position: absolute;
+	background: #fff;
+	border: 1px solid #7B7B7B;
+	display: block;
+	overflow: hidden;
+	width: 600px;
+	height: 420px;
+	margin: auto;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+.layer .layerhead {
+	border-bottom: 2px solid #c0c0c0;
+	margin: 5px 10px 0px 10px;
+}
+.layer .layerhead h3 {
+	padding: 0 10px;
+	font-size: 16px;
+	line-height: 40px;
+}
+.layer .layerhead a.btn_close {
+	display: block;
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	text-indent: -1000px;
+}
+.layer .layerBody {
+	padding: 30px 20px;
+}
+.layer .layerhead a.btn_close {
+	display: block;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	width: 17px;
+	height: 17px;
+	background: url(/images/btnSet.png) 0 -148px;
+	overflow: hidden;
+}
+.layer .board-foot {
+	padding: 0px;
+	border-top-color: rgb(209, 209, 209);
+	border-top-width: 1px;
+	border-top-style: solid;
+	position: relative;
+	text-align: center;
+}
+.layer .buttons {
+	padding: 30px 0px 15px 0px;
+}
+.reset_pw {
+	padding: 10px 0px 30px 0px;
+}
+.reset_pw li {
+	padding: 6px;
+}
+.reset_pw label {
+	width: 150px;
+	display: inline-block;
+	margin-left: 55px;
+	padding-left: 15px;
+	background: url("/images/bulSet.png") 0 -18px no-repeat;
+}
+.reset_pw input {
+	text-align: left;
+	padding: 5px;
+	border: 1px solid #c9c9c9;
+	border-radius: 3px;
+	width: 260px;
+}
+.tip {
+	padding: 8px 0px 10px 225px;
+}
+.tip span {
+	font-size: 13px;
+	background: url(/images/bulSet.png) 0 -160px no-repeat;
+	color: #ff6600;
+	padding-left: 8px;
+	display: block;
+}
+/* buttons */
+button {
+	background: #f6f6f6;
+	border-radius: 3px;
+	height: 29px;
+	line-height: 25px;
+	border: 1px solid #c5c5c5;
+	line-height: 0.8;
+	color: #444444;
+	min-width: 80px;
+	font-weight: bold;
+	letter-spacing: normal;
+	padding: 0px 10px 0px 10px;
+	position: relative;
+}
+button:hover {
+	background: #edecec;
+}
